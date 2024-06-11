@@ -1,4 +1,4 @@
-@import url("styles/header.css"); /*importar o arquivo header.css*/
+/*@import url("styles/header.css"); /*importar o arquivo header.css*/
 
 :root{ /*definir variaveis de cor*/
     --cor-de-fundo: #EBECEE;
@@ -7,4 +7,25 @@
 body{ /*estilizacao do corpo da pagina*/
     background-color: var(--cor-de-fundo);
     color: var(--cor-fonte);
+}
+.cabecalho-menu{ /*estilizacao do span no cabecalho*/
+    width: 24px; /*largura*/
+    height: 24px;/*altura*/
+    background-color: rgb(240, 138, 4); /*cor de fundo*/
+    display: inline-block; /*alinhar os elementos em linha*/
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.cabecalho{ /*estilizacao geral do cabecalho*/
+    background-color: var(--cor-fonte);
+    display: flex; /*distribui melhor os elementos na pagina*/
+    justify-content: space-between; /*espacamento entre os elementos*/
+    align-items: center; /*alinha os elementos no centro*/
+}
+.container{ /*estilizacao dos icones dentro das tags div*/
+    display: flex; /*distribui melhor os elementos na pagina*/
+    align-items: center; /*alinha os elementos no centro*/
+}
+.container-imagem{ /*estilizacao das imagens*/
+    padding: 1em; /*margem interna*/
 }
