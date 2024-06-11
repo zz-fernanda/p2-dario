@@ -28,6 +28,6 @@ body{ /*estilizacao do corpo da pagina*/
 }
 .container-imagem{ /*estilizacao das imagens*/
     padding: 1em; /*margem interna*/
-    width: 2px;
-    height: 2px;
+    width: 24px;
+    height: 24px;
 }
