@@ -1,0 +1,10 @@
+@import url("styles/header.css"); /*importar o arquivo header.css*/
+
+:root{ /*definir variaveis de cor*/
+    --cor-de-fundo: #EBECEE;
+    --cor-fonte: #2b0036;
+}
+body{ /*estilizacao do corpo da pagina*/
+    background-color: var(--cor-de-fundo);
+    color: var(--cor-fonte);
+}
