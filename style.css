@@ -15,6 +15,8 @@ body{ /*estilizacao do corpo da pagina*/
     }
 }
 
+/* INICIO DO CABECALHO */
+
 .cabecalho-menu{ /*estilizacao do span no cabecalho*/
     width: 24px; /*largura*/
     height: 24px;/*altura*/
@@ -38,3 +40,5 @@ body{ /*estilizacao do corpo da pagina*/
     width: 24px;
     height: 24px;
 }
+
+/*  FIM DO CABECALHO */
