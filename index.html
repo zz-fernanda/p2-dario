@@ -3,21 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <!--<link rel="stylesheet" href="styles/reset.css">-->
-    <title>Segundo semestre</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css"><!--conecta o html com css-->
+    <link rel="stylesheet" href="reset.css">
+    <title>Segundo semestre</title><!--título que aparece na aba do navegador-->
+    
 </head>
+
+<!--CORPO DA PÁGINA (TUDO QUE APARECERÁ NA PÁGINA FICA AQUI)-->
 <body>
+    <!--INICIO DO CABEÇALHO-->
     <header class="cabecalho">
-    <div class="container">
-        <span class="cabecalho-menu"></span>
-        <img class="container-imagem" src="corinthians.png" alt="Logo da">
+    <div class="container"> <!--tag DIV cria uma divisão-->
+        <input type="checkbox" id="menu" class="container-botao"><!--a tag input cria uma caixa de 
+        selecao que detecta e guarda a ação do clique-->
+        <label for="menu"><!--a tag label funciona para associar todos os
+            elementos dentro dele por meio da propriedade id-->
+        <span class="cabecalho-menu"></span><!--a tag span cria um espaço vazio no layout-->
+        </label>
+        <ul class="lista-menu"><!--a tag UL cria uma lista não ordenada-->
+            <li class="lista-menu-titulo">Categorias</li><!--tag LI cria as linhas da lista-->
+            <li class="lista-menu-item">
+                <a href="#" class="lista-menu-link">Categoria 1</a><!--a tag A cria ligações entre página através de um link-->
+            </li>
+            <li class="lista-menu-item">
+                <a href="#" class="lista-menu-link">Categoria 2</a>
+            </li>
+            <li class="lista-menu-item">
+                <a href="#" class="lista-menu-link">Categoria 3</a>
+            </li>
+            <li class="lista-menu-item">
+                <a href="#" class="lista-menu-link">Categoria 4</a>
+            </li>
+            <li class="lista-menu-item">
+                <a href="#" class="lista-menu-link">Categoria 5</a>
+            </li>
+        </ul>
+        <img class="container-imagem" src="corinthians.png" alt="Logo da"><!--tag img para 
+        colocar imagens-->
     </div>
     <div class="container">
         <a href="#"><img class="container-imagem" src="corin.jpg" alt="Meus favoritos"></a>
+        <!--a tag A cria uma ligacao entre páginas atraves de um link-->
         <a href="#"><img class="container-imagem" src="co.png" alt="Carrinho de compras"></a>
         <a href="#"><img class="container-imagem" src="cor.jpg" alt="Meu perfil"></a>
     </div>
     </header>
+    <!--FIM DO CABEÇALHO-->
+
+    <!--INICIO DO BANNER-->
+    <section class="banner"><!--cria uma seção para fazermos um banner-->
+        <h2 class="banner-titulo">Já sabe por onde começar?</h2><!--título do banner-->
+        <p class="banner-texto">Shrek is love, Shrek is life!</p><!--a tag P cria um parágrafo-->
+        <input type="search" class="banner-pesquisa" placeholder="Qual será o próximo filme que você vai assistir?">
+        <!--a tag INPUT do tipo SEARCH cria um campo de busca-->
+        <!--o atributo PLACEHOLDER indica ao usuário como preencher o campo-->
+    </section>
+    <!--FIM DO BANNER-->
+
+    <!--INICIO DO CARROSSEL (SLIDES)-->
+    <section class="carrossel">
+        <h2 class="carrossel-titulo">Top filmes</h2>
+        <!-- container principal do controle deslizante -->
+        <div class="swiper">
+          
+          <div class="swiper-pagination"></div>
+          
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide"><img src="shrek1.jpg" alt="Shrek 1"></div>
+            <div class="swiper-slide"><img src="shrek2.jpg" alt="Shrek 2"></div>
+            <div class="swiper-slide"><img src="shrek3.jpg" alt="Shrek 3"></div>
+            <div class="swiper-slide"><img src="shrek4.jpg" alt="Shrek 4"></div>
+            <div class="swiper-slide"><img src="gato1.jpg" alt="Gato de botas 1"></div>
+            <div class="swiper-slide"><img src="gato2.jpg" alt="Gato de botas 2"></div>
+          </div>
+    
+          <!-- setas ao lado para passar de slide -->
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+      <!--FIM DO CARROSSEL-->
+    
+      <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      spaceBetween: 10, //espaçamento entre slides
+      slidesPerView: 3, //indica quantos slides devem aparecer por visualização
+      pagination: { //as bolinhas indicadores de páginas
+        el: ".swiper-pagination", //determina que o elemento esteja na div swiper-pagination
+        type: "bullets", //indica que o estilo de elemento será bullets, ou seja, pontos
+      },
+    });
+  </script>
+  
 </body>
 </html>

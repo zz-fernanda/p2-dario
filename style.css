@@ -1,21 +1,22 @@
-/*@import url("styles/header.css"); /*importar o arquivo header.css*/
-
 :root{ /*definir variaveis de cor*/
     --cor-de-fundo: #EBECEE;
+    --cor-cabecalho: rgb(246, 187, 155);
     --cor-fonte: #2b0036;
+    --degrade: linear-gradient(97.54deg, #002F52 35.49%, #326589 165.37%);
+    --branco: white;
 }
 body{ /*estilizacao do corpo da pagina*/
     background-color: var(--cor-de-fundo);
     color: var(--cor-fonte);
 }
 
-@media screen and (min-width:768px){ /*independente do dispositivo que o usuário estiver utilizando, o site irá se adaptar e ficar totalmente responsivo, sem quebras de layout*/
-    .botoes{ /*classe botoes no HTML*/
-        display: flex;
+/*@media screen and (min-width:768px){ /*independente do dispositivo que o usuário estiver utilizando, o site irá se adaptar e ficar totalmente responsivo, sem quebras de layout*/
+    /*.botoes{ /*classe botoes no HTML*/
+       /* display: flex;
     }
-}
+}*/
 
-/* INICIO DO CABECALHO */
+/* INICIO DO CABEÇALHO */
 
 .cabecalho-menu{ /*estilizacao do span no cabecalho*/
     width: 24px; /*largura*/
@@ -26,10 +27,11 @@ body{ /*estilizacao do corpo da pagina*/
     background-position: center;
 }
 .cabecalho{ /*estilizacao geral do cabecalho*/
-    background-color: var(--cor-fonte);
+    background-color: var(--cor-cabecalho);
     display: flex; /*distribui melhor os elementos na pagina*/
     justify-content: space-between; /*espacamento entre os elementos*/
     align-items: center; /*alinha os elementos no centro*/
+    position: relative; /*posiciona relativamente o item para usarmos outras opçoes como TOP, RIGHT, BOTTOM*/
 }
 .container{ /*estilizacao dos icones dentro das tags div*/
     display: flex; /*distribui melhor os elementos na pagina*/
@@ -40,5 +42,91 @@ body{ /*estilizacao do corpo da pagina*/
     width: 24px;
     height: 24px;
 }
+.lista-menu{ /*estilização da classe lista-menu*/
+    display: none; /*a propriedade DISPLAY:NONE faz com que a lista seja ocultada*/
+    position: absolute;
+    top: 100%;
+    width: 60vw;
+}
+/*Para exibir a lista, utilizamos a pseudoclasse no CSS chamada :checked*/
+/*Essa pseudoclasse verifica se o botão está selecionado ou não*/
+/*Caso esteja selecionado, alteraremos a classe .lista-menu utilizando o combinador CSS ~ */
+.container-botao:checked ~ .lista-menu{
+    display: block; /*a propriedade DISPLAY:BLOCK faz com que a lista apareça*/
+}
+.container-botao{
+    display: none; /*aqui removemos o input checkbox*/
+}
+.lista-menu-titulo,
+.lista-menu-item{
+    padding: 1em;
+    background-color: var(--cor-cabecalho);
+}
+.lista-menu-titulo{
+    color: var(--cor-fonte);
+    font-weight: 700; /*peso da fonte (deixou em negrito)*/
+}
+.lista-menu-link{
+    background: var(--degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+}
+/*  FIM DO CABEÇALHO */
 
-/*  FIM DO CABECALHO */
+/*INÍCIO DO BANNER*/
+.banner{
+    background: var(--degrade);
+    color: var(--branco);
+    text-align: center;
+}
+.banner-titulo{
+    font-size: 18px; /*tamanho da fonte 18 pixels*/
+    font-weight: 700; /*peso da fonte 700*/
+    margin: 1em 0;
+    margin-top: 1em;
+}
+.banner-texto{
+    font-weight: 500; /*peso da fonte 500*/
+    margin: em 0; /*espaçamento externo: 1 superior e inferior, 0 esquerda e direita*/
+}
+.banner-pesquisa{
+    background-color: transparent;
+    border: 1px solid var(--branco);
+    color: var(--branco);
+    border-radius: 24px;
+    padding: 1em;
+    width: 100%;
+}
+.banner-pesquisa::placeholder{
+    font-family: var(--cor-fonte);
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    color: var(--branco);
+}
+/*FIM DO BANNER*/
+
+/*INÍCIO DO CARROSSEL*/
+.carrossel-titulo {
+    color: var(--laranja);
+    background-color: var(--branco);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 1em 0 0.5em 0;
+}
+.swiper-slide img {
+    width: 100%;
+}
+.swiper-button-prev,
+.swiper-button-next {
+    display: none;
+}
+.swiper-pagination {
+    position: initial;
+    margin: .5em 0;
+}
+/*FIM DO CARROSSEL*/
